@@ -1,12 +1,8 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
-router.post('/', function(req, res, next) {
-  if (typeof req.body.subscribe === 'boolean') {
-    res.send({ data: true });
-  }
-
-  res.send({ data: false });
+router.post("/", function(req, res) {
+  res.send({ isOnline: !!req.body.subscribe, friendId: req.body.friendId });
 });
 
 module.exports = router;
