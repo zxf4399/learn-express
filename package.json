@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "PORT=4000 DEBUG=express-app:* npm start"
+    "dev": "cross-env PORT=4000 DEBUG=express-app:* npm start"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -13,5 +13,8 @@
     "http-errors": "~1.7.3",
     "morgan": "~1.9.1",
     "pug": "2.0.4"
+  },
+  "devDependencies": {
+    "cross-env": "^6.0.3"
   }
 }
